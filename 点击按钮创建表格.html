@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 400px;
+            border: 1px solid orangered;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        var arr = [{
+                name: "爱奇艺",
+                href: "http://www.iqiyi.cn"
+            },
+            {
+                name: "bilibili",
+                href: "http://www.bilibili.cn"
+            },
+            {
+                name: "优酷",
+                href: "http://www.youku.cn"
+            },
+            {
+                name: "土豆",
+                href: "http://www.tudou.cn"
+            }
+        ];
+        $(function () {
+            $("#btn").click(function () {
+                var table = $(
+                    "<table style='cursor:pointer' border='1' cellspacing = '0' cellpadding='0'></table>"
+                    );
+                $("#dv").append(table);
+                // 循环遍历创建行
+                for (var i = 0; i < arr.length; i++) {
+                    var dt = arr[i];
+                    var tr = $("<tr></tr>");
+                    tr.appendTo(table);
+                    // 创建第一列
+                    var td1 = $("<td>" + dt.name + "</td>");
+                    tr.append(td1);
+                    // 创建第二列
+                    var td2 = $("<td><a href ='" + dt.href + " '>" + dt.name + "</a></td>");
+                    tr.append(td2);
+                }
+            });
+
+            $("#btn2").click(function () {
+                $(this).next().empty();
+            });
+
+            //点击按钮,在table中添加一行
+            $("#btn3").click(function () {
+                //创建一行
+                var tr = $("<tr><td>腾讯</td><td><a href='http://.qq.com'>腾讯</a></td></tr>");
+                //把这一行加入到table中
+                $("#dv").children("table").append(tr);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="创建表格" id="btn">
+    <input type="button" value="删除表格" id="btn2">
+    <input type="button" value="添加一行" id="btn3" />
+    <div id="dv"></div>
+</body>
+
+</html>

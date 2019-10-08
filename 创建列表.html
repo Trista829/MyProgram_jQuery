@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 600px;
+            border: 2px dotted orangered;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        // =================手动添加
+        // $(function () {
+        //     //点击按钮
+        //     $("#btn").click(function () {
+        //         //创建列表加入到div中
+        //         //创建ul,加入到div中
+        //         var ulObj = $("<ul style='list-style-type: none;cursor: pointer'></ul>");
+        //         $("#dv").append(ulObj);
+        //         //创建li,加入到ul中
+        //         $("<li>降龙十八掌</li><li>六脉神剑</li><li>葵花宝典</li>  <li>辟邪剑谱</li><li>少女萌萌拳</li> ").appendTo(
+        //             ulObj).mouseenter(function () {
+        //             $(this).css("backgroundColor", "green");
+        //         }).mouseleave(function () {
+        //             $(this).css("backgroundColor", "");
+        //         }).click(function () {
+        //             $(this).css("color", "pink").css("fontFamily", "全新硬笔行书简").css("fontSize",
+        //                 "50px");
+        //         });
+        //     });
+        // });
+
+        // ===============动态创建
+        $(function () {
+            var array = ["风斯托罗斯基", "小苏坨萝斯基", "助教坨萝斯基", "尼古拉斯凯奇赵四", "小胖妞", "杰森斯坦森班主任", "小明", "小红", "小李", "小白",
+                "小绿", "小黑"
+            ];
+            //根据id选择器获取按钮,添加点击事件
+            $("#btn").click(function () {
+                //先创建ul加入到div中
+                var ulObj = $("<ul style='cursor: pointer'></ul>").appendTo($("#dv"));
+                //创建li标签,加入到ul中---循环遍历数组
+                for (var i = 0; i < array.length; i++) {
+                    $("<li>" + array[i] + "</li>").appendTo(ulObj).mouseenter(function () {
+                        $(this).css("backgroundColor", "darkgreen");
+                    }).mouseleave(function () {
+                        $(this).css("backgroundColor", "");
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="创建列表" id="btn" />
+    <div id="dv"></div>
+
+</body>
+
+</html>

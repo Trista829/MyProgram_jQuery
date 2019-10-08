@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        // $(function(){
+        //     $("#uu>li").mouseenter(function(){
+        //         $(this).css("backgroundColor","red");
+        //     });
+        //     $("#uu>li").mouseleave(function(){
+        //         $(this).css("backgroundColor","");
+        //     });
+        //     $("#uu>li").click(function(){
+        //         $(this).css("color","green");
+        //         $(this).css("font-size","20px");
+        //         $(this).css("font-family","宋体");
+        //     });
+        // });
+
+
+        // 链式编程
+        $(function(){
+            $("#uu>li").mouseenter(function(){
+                $(this).css("backgroundColor","red");
+            }).mouseleave(function(){
+                $(this).css("backgroundColor","");
+            }).click(function(){
+                $(this).css("color","green").css("font-size","20px").css("font-family","宋体");
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="uu">
+        <li>安抚黑人</li>
+        <li>家咯就</li>
+        <li>眯会</li>
+        <li>离开囧i给</li>
+        <li>奖励计划</li>
+        <li>你胡歌</li>
+    </ul>
+</body>
+</html>

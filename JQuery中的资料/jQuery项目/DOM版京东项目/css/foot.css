@@ -1,0 +1,146 @@
+/*底部开始========================*/
+.footer{
+    height: 550px;
+    margin-top: 20px;
+    background-color: #EAEAEA;
+}
+.footer .service{
+    /*下面的边框*/
+    height: 102px;
+    border-bottom: 1px solid #DEDEDE;
+    /*background-color: orange;*/
+}
+.footer .service .w{
+    height: 102px;
+    /*background-color:yellow;*/
+    line-height: 102px;
+}
+.footer .service li{
+    float: left;
+    width: 297px;
+}
+.footer .service .ser-dv{
+    margin: 0 auto;
+    width: 206px;
+    /*border: 2px solid red;*/
+    /*height: 20px;*/
+}
+.footer .service h5,
+.footer .service p{
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer .service h5{
+    margin-top: 28px;
+    width: 36px;
+    height: 42px;
+    font-size: 26px;
+    text-align: center;
+    text-indent: -3000px;
+    background: url("../images/ico_service.png") no-repeat;
+}
+.footer .service .kuai{
+    background-position: 0 -43px;
+}
+.footer .service .hao{
+    background-position: 0 -86px;
+}
+.footer .service .sheng{
+    background-position: 0 -128px;
+}
+/*购物指南的那一坨-----*/
+.footer .help{
+    height: 200px;
+    border-bottom: 1px solid #DEDEDE;
+    /*background-color: green;*/
+}
+.footer .help dl{
+    float: left;
+    width: 195px;
+    margin-top: 25px;
+}
+.footer .help dt{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.footer .help dd{
+    font-size: 12px;
+    line-height: 22px;
+}
+.footer .help .map{
+    margin-top: 23px;
+    text-align: center;
+    float: right;
+    width: 207px;
+    height: 150px;
+    background: url("../images/ico_footer.png") no-repeat;
+}
+.footer .help .map dt{
+    /*margin-top: 25px;*/
+}
+.footer .help .map dd{
+    position: relative;
+}
+.footer .help .map p{
+    width: 175px;
+    height: 51px;
+    text-align: left;
+    position: absolute;
+    top:8px;
+    right: 23px;
+}
+.footer .help .map a{
+    position: absolute;
+    top:72px;
+    right: 17px;
+}
+.footer .help .map a i{
+    font-size: 12px;
+}
+/*版权的内容*/
+.footer .copyright{
+    height: 196px;
+    /*background-color: #281B83;*/
+    text-align: center;
+}
+.footer .copyright p{
+    margin-top: 15px;
+}
+.footer .copyright .spacer{
+    margin: 0 8px 0;
+}
+.footer .copyright .info p{
+    margin-top: 5px;
+}
+.footer .copyright .authentication{
+    height: 32px;
+    /*background-color: red;*/
+}
+.footer .copyright .authentication a{
+    width: 103px;
+    height: 32px;
+    display: inline-block;
+    /*background-color: blue;*/
+    background: url("../images/ico_footer.png") no-repeat;
+}
+.footer .copyright .authentication .a1{
+    background-position: 0 -151px;
+}
+.footer .copyright .authentication .a2{
+    background-position: -103px -151px;
+}
+.footer .copyright .authentication .a3{
+    background-position: 0 -184px;
+}
+.footer .copyright .authentication .a4{
+    background-position: -103px -184px;
+}
+.footer .copyright .authentication .a5{
+    background-position: 0 -217px;
+}
+.footer .copyright .authentication .a6{
+    background-position: -103px -217px;
+}
+/*底部开始========================*/

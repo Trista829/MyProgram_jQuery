@@ -1,0 +1,361 @@
+/*顶部广告开始==============================*/
+.head-top {
+    height: 80px;
+    background-color: #281B83;
+}
+
+.head-top .w {
+    position: relative;
+}
+
+.head-top i {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.head-top i:hover {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/*顶部广告结束==============================*/
+
+/*顶部导航开始===========================*/
+.shortcut {
+    height: 30px;
+    line-height: 30px;
+    background-color: #E3E4E5;
+    border-bottom: 1px solid #DADADA;
+}
+
+.shortcut .fl {
+    margin-left: 200px;
+}
+#sendTo{
+    position: relative;
+}
+.shortcut .fl .dv-dt{
+    width: 48px;
+    height: 29px;
+    /*border: 1px solid #CCC;*/
+    /*border-bottom: transparent;*/
+}
+/*设置北京显示效果的样式*/
+.dv-dt-show{
+    background-color: #FFF;
+    border:1px solid #ccc;
+    border-bottom: transparent;
+}
+
+/*.shortcut .fl .dv-dd{*/
+    /*width: 300px;*/
+    /*height: 200px;*/
+    /*background-color: white;*/
+    /*border:1px solid #CCC;*/
+    /*border-top: transparent;*/
+    /*position: absolute;*/
+    /*z-index: 2;*/
+    /*display: none;*/
+    /*padding-left: 10px;*/
+    /*padding-top: 12px;*/
+
+/*}*/
+.shortcut .fl .send-area{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 300px;
+    height: 196px;
+    border: 1px solid #cccccc;
+    border-top: transparent;
+    background-color: #fff;
+    padding: 10px 0 10px 10px;
+    display: none;
+}
+.shortcut .send-spacer { /*复用代码*/
+    width: 93px;
+    height: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+}
+
+.shortcut .send-area .item {
+    float: left;
+    width: 60px;
+    height: 24px;
+    padding: 2px 0;
+}
+
+.shortcut .send-area .item a {
+    display: inline-block;
+    /*width: 24px;*/
+    height: 24px;
+    line-height: 24px;
+    padding: 0 8px;
+}
+
+.shortcut .send-area .item #currentArea {
+    background-color: #C81623;
+    color: #ffffff;
+}
+
+.shortcut .send-area .item .current {
+    /*background-color: #f1f1f1;*/
+    background-color: green;
+    color: #C81623;
+}
+/*送至北京样式结束*/
+
+.shortcut .fl i {
+    color: #F10215;
+    font-size: 14px;
+}
+
+.shortcut .fl span {
+    font-family: "宋体";
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+}
+
+/*右侧的列表----*/
+.shortcut .fr {
+    margin-right: 10px;
+}
+
+.shortcut .fr li {
+    float: left;
+    padding: 0 10px;
+}
+
+.shortcut .fr .line {
+    width: 1px;
+    height: 10px;
+    background-color: #CCCCCC;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.shortcut .fr li i {
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+.shortcut .fr .phone-jd {
+    position: relative;
+    cursor: pointer;
+}
+
+.shortcut .fr .phone-jd:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid #FFF;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 15px;
+    top: 21px;
+}
+
+.shortcut .fr .phone-jd .phone-erweima {
+    width: 66px;
+    height: 66px;
+    border: 1px solid #CFCFCF;
+    position: absolute;
+    left: -8px;
+    top: 30px;
+    background: url("../images/mobile_qrcode.jpg") no-repeat center;
+}
+.phone-jd #phone-img{
+    position: absolute;
+    right: -20px;
+    top: 30px;
+    z-index: 100;
+    display: none;
+}
+
+/*顶部导航结束===========================*/
+
+/*顶部的搜索的部分的整体部分======开始====*/
+.search {
+    height: 140px;
+    /*background-color: pink;*/
+
+}
+
+.search .logo { /*logo部分*/
+    width: 190px;
+    height: 170px;
+    /*background-color: red;*/
+    margin-top: -30px;
+    float: left;
+}
+
+.search .logo a { /*logo的图片显示*/
+    width: 190px;
+    height: 170px;
+    display: block;
+    background-image: url("../images/logo.v2.png");
+    background-color: #FFF;
+    text-indent: -2000px; /*设置京东的文字不在当前页面显示*/
+    /*第一个值表示阴影水平方向显示*/
+    /*第二个值表示阴影上下方向显示*/
+    /*第三个值表示阴影的宽度*/
+    /*第四个值表示阴影的颜色*/
+    box-shadow: 0 0 5px red;
+}
+
+.search .t-search { /*搜索框*/
+    float: left;
+    width: 548px;
+    height: 33px;
+    /*background-color: blue;*/
+    margin-left: 130px;
+    margin-top: 25px;
+    border: 1px solid #F10215;
+    position: relative;
+}
+
+.search .search-txt { /*文本框*/
+    width: 494px;
+    height: 33px;
+    font-size: 14px;
+    line-height: 33px;
+    padding-left: 4px;
+    font-family: "微软雅黑";
+    color: #989898;
+    float: left;
+
+}
+
+
+.search .search-btn { /*按钮*/
+    float: left;
+    width: 50px;
+    height: 33px;
+    background-color: #F10215;
+    cursor: pointer;
+}
+
+.search .t-search i { /*按钮图标*/
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search .cart { /*购物车部分*/
+    float: right;
+    margin-top: 25px;
+    margin-right: 98px;
+    width: 188px;
+    height: 33px;
+    border: 1px solid #E3E4E5;
+    background-color: #FFF;
+    line-height: 33px;
+    text-align: center;
+    position: relative;
+}
+.search .cart .mycart{/*推车图标*/
+    color: #F10214;
+    position: absolute;
+    top:0;
+    left:37px;
+}
+.search .cart a{/*我的购物车的a标签颜色*/
+    color: #F10214;
+}
+.search .cart .icon1{/*购物车中产品数量的设置*/
+    /*width: 14px;*/
+    height: 14px;
+    background-color: #F10215;
+    line-height: 16px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left:130px;
+    top:3px;
+    color: #FFF;
+    font-size: 12px;
+    padding: 0 4px;
+    border-radius:7px;
+}
+
+.search .hot-words { /*热词部分*/
+    width: 550px;
+    height: 18px;
+    /*background-color: green;*/
+    float: left;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+.search .hot-words li{
+    float: left;
+    margin-right: 10px;
+}
+
+
+.search .nav-item { /*列表部分*/
+    /*width: 670px;*/
+    height: 24px;
+    /*background-color: orange;*/
+    float: left;
+    margin-top: 18px;
+    margin-left: 40px;
+}
+.search .nav-item ul,
+.search .nav-item .box,
+.search .nav-item li{
+    float: left;
+}
+.search .nav-item a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #555555;
+    font-family: "微软雅黑";
+
+}
+.search .nav-item .box{
+    width: 1px;
+    height: 10px;
+    background-color: #CCCCCC;
+    margin: 15px 4px 0;
+}
+.search .nav-item li{
+   margin-left: 15px;
+    margin-right: 15px;
+}
+
+.search .guanggao { /*活动广告*/
+    width: 190px;
+    height: 40px;
+    /*background-color: yellow;*/
+    float: right;
+}
+.search .guanggao a{
+    width: 190px;
+    height: 40px;
+    display: block;
+    background-image: url("../images/58c01fabN6df678a6.png");
+}
+
+/*顶部的搜索的部分的整体部分======结束====*/

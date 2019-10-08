@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友小K分享原创Jquery分页显示插件</title>
+<link href="Css/Css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="Script/jquery.kkPages.js"></script>
+<script>
+$(function(){
+	
+	$('.pagelist').kkPages({
+		
+		PagesClass:'.item', //需要分页的元素
+		PagesMth:4, //每页显示个数		
+		PagesNavMth:5 //显示导航个数
+		
+		
+		});
+		
+	$('.newslist').kkPages({
+		
+		PagesClass:'li', //需要分页的元素
+		PagesMth:5, //每页显示个数		
+		PagesNavMth:5 //显示导航个数
+		
+		
+		});
+
+}); 
+
+</script>
+</head>
+<body>
+<center>
+  <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both;">网友小K分享原创Jquery分页显示插件<br />
+    JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank">http://www.jq-school.com</a>）<br />
+	小K个人网站（<a href="http://www.lnend.com" target="_blank">http://www.lnend.com</a>）<br />
+    官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=47d9817e9e09f61b288b8ad6d33fb18cbd659ca6773f663918d6e5d3a2981a12"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂③群" title="Jquery学堂③群"></a> </div>
+</center>
+<br />
+
+<div class="title">
+  <h1>jQuery 分页插件</h1>
+  <hr />
+  * Powered By 小K
+  * QQ 908526866
+  * E-mail lnend@sina.cn
+  * Data 2013-05-28
+  * Dependence jQuery v1.8.3 <br />
+  <font color="#FF0000">*** 如发现BUG请及时与我联系,不求最好但求不报错~！感谢大家对小K的支持~！ ***<br />
+  * 小K - 专注前端开发 * </font> </div>
+<div class="wrap">
+  <h4>Demo1</h4>
+  <hr />
+  <div class="pagelist">
+    <div class="item"><img src="http://plugin.lnend.com/Images/1.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/2.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/3.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/4.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/5.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/6.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/7.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/8.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/1.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/2.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/3.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/4.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/5.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/6.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/7.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/8.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/1.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/2.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/3.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/4.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/5.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/6.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/7.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/8.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/1.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/2.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/3.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/4.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/5.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/6.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/7.PNG" width="100" /></div>
+    <div class="item"><img src="http://plugin.lnend.com/Images/8.PNG" width="100" /></div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <h4>Demo2</h4>
+  <hr />
+  <div class="newslist">
+    <ul>
+      <li>
+        <div><a href="#">新闻标题标题1</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题2</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题3</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题4</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题5</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题6</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题7</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题8</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题9</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题10</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题11</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题12</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题13</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题14</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题15</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题16</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题17</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题18</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题19</a></div>
+        <span>2012/12/12</span> </li>
+      <li>
+        <div><a href="#">新闻标题标题20</a></div>
+        <span>2012/12/12</span> </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <h4>如何使用本插件</h4>
+  <hr />
+  <div class="yongfa">
+    <h6>1.添加分页导航css样式</h6>
+    /* kkPages */<br />
+    .Pagination{float: right;height: 55px;_height: 45px; line-height: 20px;margin-right: 15px;_margin-right: 5px; color: <br />
+    #565656;margin-top: 10px;_margin-top: 20px; clear:both;}<br />
+    .Pagination span{margin-right: 5px;display: block;float: left;margin-left: 5px;}<br />
+    .Pagination span b{padding: 0 2px;}<br />
+    .Pagination div {float:left}<br />
+    .Pagination a{ font-size: 12px;text-decoration: none;display: block;float: left;color: #565656;border: 1px solid #cacaca;height: 20px;line-height: 20px;padding: 0 10px;margin: 0 2px;}<br />
+    .Pagination .Ellipsis {line-height: 32px;overflow: hidden; display:none;}<br />
+    cite.FormNum{display: block;float: left;line-height: 20px;height: 20px; font-style:  normal; padding-left:10px;}<br />
+    #PageNum{ color:#777;width: 30px;height: 20px;line-height: 20px; border: 1px solid #cacaca; margin:0 5px; text-align:center;}<br />
+    .Pagination a:hover,.Pagination a.PageCur{background-color: #ee6600;border: 1px solid #d64c01;color: #ffffff; }<br />
+    <br />
+    <h6>1.引入本插件</h6>
+    &lt;script src="Script/jquery.kkPages.js"&gt;&lt;/script&gt;<br />
+    <br />
+    <h6>3.调用方法</h6>
+    $('.newslist').kkPages({ <br />
+    &nbsp;&nbsp;&nbsp;PagesClass:'li', //需要分页的元素<br />
+    &nbsp;&nbsp;&nbsp;PagesMth:5, //每页显示个数 <br />
+    &nbsp;&nbsp;&nbsp;PagesNavMth:5 //显示导航个数<br />
+    });<br />
+    <br />
+  </div>
+</div>
+<hr />
+<div class="copy">© 2013 小K ™ - 专注前端开发   Web前端开发 <a href="http://www.lnend.com" target="new">www.lnend.com</a></div>
+</body>
+</html>

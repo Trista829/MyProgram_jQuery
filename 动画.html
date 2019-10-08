@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv {
+            width: 300px;
+            height: 200px;
+            background-color: deeppink;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            // 显示按钮
+            $("#btn1").click(function () {
+                // $("#dv").show(300, function () {
+                //     alert("出来了");
+                // });
+                // $("#dv").slideDown(300, function () {
+                //     alert("出来了");
+                // });
+                $("#dv").fadeIn(1000, function () {
+                    alert("出来了");
+                });
+            });
+
+            // 隐藏按钮
+            $("#btn2").click(function () {
+                // $("#dv").hide(300, function () {
+                //     alert("藏起来");
+                // });
+                // $("#dv").slideUp(300, function () {
+                //     alert("藏起来");
+                // });
+                $("#dv").fadeOut(1000, function () {
+                    alert("藏起来");
+                });
+            });
+
+            // 切换按钮
+            $("#btn3").click(function () {
+                // $("#dv").slideToggle(300);
+                $("#dv").fadeToggle(300);
+            });
+
+            // 改变透明度
+            $("#btn4").click(function () {
+                //改变透明度
+                $("#dv").fadeTo("slow", 0.2);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示" id="btn1" />
+    <input type="button" value="隐藏" id="btn2" />
+    <input type="button" value="切换" id="btn3" />
+    <input type="button" value="改变透明度" id="btn4">
+    <div id="dv"></div>
+</body>
+
+</html>

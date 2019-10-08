@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-1.12.1.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <style>
+        #dialog-link {
+            padding: .4em 1em .4em 20px;
+            text-decoration: none;
+            position: relative;
+        }
+        #dialog-link span.ui-icon {
+            margin: 0 5px 0 0;
+            position: absolute;
+            left: .2em;
+            top: 50%;
+            margin-top: -8px;
+        }
+    </style>
+    <script>
+        $(function () {
+
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                width: 400,
+                buttons: [
+                    {
+                        text: "确定",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    },
+                    {
+                        text: "取消",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ]
+            });
+
+// Link to open the dialog
+            $( "#dialog-link" ).click(function( event ) {
+                $( "#dialog" ).dialog( "open" );
+                event.preventDefault();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<h2 class="demoHeaders">登录</h2>
+<p>
+    <button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+        <span class="ui-icon ui-icon-newwin"></span>请您登录
+    </button>
+</p>
+<div id="dialog" title="欢迎登录">
+    <p>
+        帐号:<input type="text" value="" id="userName"/><br/>
+        密码:<input type="text" value="" id="userPwd"/><br/>
+    </p>
+</div>
+</body>
+</html>

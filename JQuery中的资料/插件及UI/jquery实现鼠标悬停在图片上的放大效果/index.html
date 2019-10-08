@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jquery实现鼠标悬停在图片上的放大效果</title>
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css" />
+</head>
+<!-- The JavaScript -->
+<script type="text/javascript" src="js/jquery-latest.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+//Larger thumbnail preview 
+$("ul.thumb li").hover(function() {
+$(this).css({'z-index' : '10'});
+$(this).find('img').addClass("hover").stop()
+.animate({
+	marginTop: '-110px', 
+	marginLeft: '-110px', 
+	top: '50%', 
+	left: '50%', 
+	width: '174px', 
+	height: '174px',
+	padding: '20px' 
+}, 200);
+} , function() {
+$(this).css({'z-index' : '0'});
+$(this).find('img').removeClass("hover").stop()
+.animate({
+	marginTop: '0', 
+	marginLeft: '0',
+	top: '0', 
+	left: '0', 
+	width: '100px', 
+	height: '100px', 
+	padding: '5px'
+}, 400);
+});
+//Swap Image on Click
+$("ul.thumb li a").click(function() {
+var mainImage = $(this).attr("href"); //Find Image Name
+$("#main_view img").attr({ src: mainImage });
+return false;		
+});
+});
+</script>
+
+<body>
+   <div id="col">
+        <ul class="thumb">
+            <li><a href="images/main_image1.jpg"><img src="images/thumb1.jpg" alt="" /></a></li>
+            <li><a href="images/main_image2.jpg"><img src="images/thumb2.jpg" alt="" /></a></li>
+            <li><a href="images/main_image3.jpg"><img src="images/thumb3.jpg" alt="" /></a></li>
+            <li><a href="images/main_image4.jpg"><img src="images/thumb4.jpg" alt="" /></a></li>
+            <li><a href="images/main_image5.jpg"><img src="images/thumb5.jpg" alt="" /></a></li>
+            <li><a href="images/main_image6.jpg"><img src="images/thumb6.jpg" alt="" /></a></li>
+        </ul>
+		<div id="main_view">
+		    <a target="_blank" title="jQuery图像悬停焦点效果" href=""><img alt="" src="images/main_image1.jpg" border="0"></a>
+		</div>
+   </div>
+</body>
+</html>

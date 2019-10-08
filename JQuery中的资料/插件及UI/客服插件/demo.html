@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery带关闭、打开、微信、返回顶部功能的在线客服特效</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="height:2000px;">
+<center>
+  <span style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; color:#000; width:100%; position:fixed; left:0;">jquery带关闭、打开、微信、返回顶部功能的在线客服特效<br />
+  <a href="http://www.jq-school.com" target="_blank" style="color:#000">JquerySchool</a>网站出品（<a href="http://www.jq-school.com" style="color:#000" target="_blank">http://www.jq-school.com</a>） <br />
+   <a href="http://api.jq-school.com/" target="_blank" style="color:#000">在线API帮助文档</a> <br />
+  <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=2e1c33c06e2eb5ec412a899c31ac086baa306e8342d3af1360be93654f636716">官方网站学习交流QQ群<img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" style="width:90px; height:22px;" alt="jquery学堂⑨群群" width="90" height="22" title="jquery学堂⑨群"></a></span>
+</center>
+
+<div class="main-im">
+  <div id="open_im" class="open-im"></div>  
+  <div class="im_main" id="im_main">
+    <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭"></a></div>
+    <a href="http://shang.qq.com/wpa/qunwpa?idkey=2e1c33c06e2eb5ec412a899c31ac086baa306e8342d3af1360be93654f636716" class="im-qq qq-a" title="在线QQ客服">
+    <div class="qq-container"></div>
+    <div class="qq-hover-c"><img class="img-qq" src="images/qq.png"></div>
+    <span> QQ在线咨询</span> </a>
+    <div class="im-tel">
+      <div>免费咨询热线</div>
+      <div class="tel-num">400-777-1218</div>
+    </div>
+    <div class="im-footer" style="position:relative">
+      <div class="weixing-container">
+        <div class="weixing-show">
+           <div class="weixing-txt">获得更多惊喜</div>
+          <img class="weixing-ma" src="http://www.jq-school.com/images/weixin_code.jpg">
+          <div class="weixing-sanjiao"></div>
+          <div class="weixing-sanjiao-big"></div>
+        </div>
+      </div>
+      <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+	 <div style="clear:both"></div>
+    </div>
+  </div>
+</div>
+<script src="http://www.jq-school.com/js/jquery-1.7.2.min.js"></script>
+<script>
+$(function(){
+	$('#close_im').bind('click',function(){
+		$('#main-im').css("height","0");
+		$('#im_main').hide();
+		$('#open_im').show();
+	});
+	$('#open_im').bind('click',function(e){
+		$('#main-im').css("height","272");
+		$('#im_main').show();
+		$(this).hide();
+	});
+	$('.go-top').bind('click',function(){
+		$(window).scrollTop(0);
+	});
+	$(".weixing-container").bind('mouseenter',function(){
+		$('.weixing-show').show();
+	})
+	$(".weixing-container").bind('mouseleave',function(){        
+		$('.weixing-show').hide();
+	});
+});
+</script>
+</body>
+</html>

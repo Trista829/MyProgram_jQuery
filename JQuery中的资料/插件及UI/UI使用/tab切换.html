@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-1.12.1.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <style>
+        .cls{
+            width: 500px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#tabs" ).tabs();
+        });
+    </script>
+</head>
+<body>
+<!-- Tabs -->
+<h2 class="demoHeaders">商品展示</h2>
+<div id="tabs" class="cls">
+    <ul>
+        <li><a href="#tabs-1">鞋子</a></li>
+        <li><a href="#tabs-2">皮包</a></li>
+        <li><a href="#tabs-3">裤子</a></li>
+    </ul>
+    <div id="tabs-1">鞋子是好东西</div>
+    <div id="tabs-2">裤子是好东西</div>
+    <div id="tabs-3">皮包也不错哦</div>
+</div>
+</body>
+</html>

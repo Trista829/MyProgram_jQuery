@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 5px solid red;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                // 父级创建
+                // $("#dv").append($("<a href = 'http://www.baidu.com'>百度</a>"));
+                // 先创建再添加到父级
+                $("<a href = 'http://www.baidu.com'>百度</a>").appendTo($("#dv"));
+
+            });
+            $("#btn1").click(function () {
+                //把创建的span标签这个子元素直接插入到div中第一个子元素的前面
+                $("#dv").prepend($("<span>this is span</span>"));
+                //$("<span>this is span</span>").prependTo($("#dv"));
+                //把元素添加到div的后面的位置,是div的下一个兄弟元素了
+                $("#dv").after($("<span>this is span</span>"));
+                //把元素添加到div的前面的位置,是div的上一个兄弟元素了
+                $("#dv").before($("<span>this is span</span>"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" value="创建一个a标签" id="btn" />
+    <input type="button" value="创建一个按钮" id="btn1" />
+    <div id="dv">
+        <p>这是一个p</p>
+    </div>
+    <p>这是div后面的第一个子元素</p>
+</body>
+
+</html>

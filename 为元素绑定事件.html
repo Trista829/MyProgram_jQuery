@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+
+            //为按钮绑定鼠标进入,鼠标离开,点击事件
+            //第一种写法
+            //      $("#btn").mouseenter(function () {
+            //        $(this).css("backgroundColor","red");
+            //      });
+            //      $("#btn").mouseleave(function () {
+            //        $(this).css("backgroundColor","green");
+            //      });
+            //      $("#btn").click(function () {
+            //        alert("啊~我被点了");
+            //      });
+
+            //第二种写法:链式编程
+            //      $("#btn").mouseenter(function () {
+            //        $(this).css("backgroundColor","red");
+            //      }).mouseleave(function () {
+            //        $(this).css("backgroundColor","green");
+            //      }).click(function () {
+            //        alert("啊~我被点了");
+            //      });
+
+            //第三种写法:bind方法绑定事件
+            //      $("#btn").bind("click",function () {
+            //        alert("哦买雷电嘎嘎闹");
+            //      });
+            //      $("#btn").bind("mouseenter",function () {
+            //        $(this).css("backgroundColor","red");
+            //      });
+            //      $("#btn").bind("mouseleave",function () {
+            //        $(this).css("backgroundColor","green");
+            //      });
+
+            //第四种写法:链式编程
+            //      $("#btn").bind("click",function () {
+            //        alert("哦买雷电嘎嘎闹");
+            //      }).bind("mouseenter",function () {
+            //        $(this).css("backgroundColor","red");
+            //      }).bind("mouseleave",function () {
+            //        $(this).css("backgroundColor","green");
+            //      });
+            //第五种写法:使用键值对的方式绑定事件
+            //      $("#btn").bind({"click":function () {
+            //        alert("哦买雷电嘎嘎闹");
+            //      },"mouseenter":function () {
+            //        $(this).css("backgroundColor","red");
+            //      },"mouseleave":function () {
+            //        $(this).css("backgroundColor","green");
+            //      }});
+
+            // 第六种写法：为父级元素绑定事件,父级元素代替子级元素绑定事件---子级元素委托父级绑定事件
+            //父级元素调用方法,为子级元素绑定事件
+            $("#btn").click(function () {
+                // $("#dv").delegate("p", "click", function () {
+                //     alert("啊!~,被点了");
+                // });
+
+
+                // 第七种写法：on
+                $("<p>这是一个p</p>").appendTo($("#dv"));
+                //和delegate是一样,都是在为子元素绑定事件，只是参数顺序不一样
+                $("#dv").on("click", "p", function () {
+                    alert("p被点击了");
+                });
+            });
+
+        });
+
+        /*
+         *
+         * 对象.事件名字(事件处理函数);--->普通的写法
+         * 对象.bind(参数1,参数2);---->参数1:事件的名字,参数2:事件处理函数
+         * 前两种方式只能为存在的元素绑定事件,后添加的元素没有事件
+         *
+         * 下面的两种方式,可以为存在的元素绑定事件,后添加的元素也有事件
+         * 对象.delegate("选择器","事件名字",事件处理函数);
+         * 父级元素调用方法,代理子级元素绑定事件
+         * 对象.on("事件名字","选择器",事件处理函数);
+         * 父级元素调用方法,代理子级元素绑定事件
+         *
+         * 因为delegate方法中是调用的on的方法
+         * 所以,以后直接用on就可以了
+         *
+         *
+         * */
+    </script>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn" />
+    <div id="dv">
+        <p>这是p</p>
+    </div>
+</body>
+
+</html>

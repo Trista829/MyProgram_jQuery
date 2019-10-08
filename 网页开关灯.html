@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cls {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn" value="关灯" type="button" />
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        // 第一种
+        // $("#btn").click(function () {
+        //     if ($("body").hasClass("cls")) {
+        //         $("body").removeClass("cls");
+        //         $("#btn").val("关灯");
+        //     } else {
+        //         $("body").addClass("cls");
+        //         $("#btn").val("开灯");
+        //     }
+        // });
+
+        // 第二种----不需要css样式，jQuery中手动添加
+        // $("#btn").click(function () {
+        //     if ($(this).val() == "关灯") {
+        //         $("body").css("backgroundColor", "black");
+        //         $(this).val("开灯");
+        //     } else {
+        //         $("body").css("backgroundColor", "");
+        //         $(this).val("关灯");
+        //     }
+        // });
+
+        // 第三种：切换类样式
+        $("#btn").click(function(){
+            $("body").toggleClass("cls");
+        });
+    </script>
+</body>
+
+</html>

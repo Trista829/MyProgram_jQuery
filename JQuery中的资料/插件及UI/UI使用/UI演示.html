@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-1.12.1.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <style>
+        .cls{
+            width: 300px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $( "#accordion" ).accordion();
+        });
+    </script>
+</head>
+<body>
+<!-- Accordion -->
+<h2 class="demoHeaders">切换效果实现</h2>
+<div id="accordion" class="cls">
+    <h3>手机</h3>
+    <div>
+        <ul>
+            <li>手机开发</li>
+            <li>手机硬件</li>
+            <li>手机软件</li>
+            <li>手机电路</li>
+        </ul>
+    </div>
+    <h3>电脑</h3>
+    <div>电脑开发</div>
+    <h3>平板</h3>
+    <div>平板开发</div>
+</div>
+</body>
+</html>
